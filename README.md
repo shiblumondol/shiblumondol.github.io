@@ -1,16 +1,9 @@
-# Shiblu Mondol Portfolio
+Shiblu Mondal — Parallelism Portfolio
 
-Free static portfolio website.
+This version adapts the HTML5 UP Parallelism template for Shiblu Mondal.
 
-## Publish with GitHub Pages
+Before publishing, add these two files to the repository root:
+- Shiblu-Mondal.png (your profile photo)
+- Shiblu-Mondal-Resume.pdf (your resume)
 
-1. Create a public repository named `YOUR-USERNAME.github.io`.
-2. Upload all files/folders in this directory so `index.html` is in the repository root.
-3. Go to Settings → Pages.
-4. Under Build and deployment choose `Deploy from a branch`.
-5. Select branch `main` and folder `/ (root)`, then Save.
-6. Your site will be available at `https://YOUR-USERNAME.github.io/`.
-
-## Update later
-
-Edit `index.html` or `assets/style.css`, then upload/commit the changed files to GitHub. GitHub Pages will republish the changes.
+Then keep the existing HTML5 UP assets folders.
