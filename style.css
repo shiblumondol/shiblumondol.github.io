@@ -32,8 +32,8 @@ a {
 
 .hero-inner {
     display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 60px;
+    grid-template-columns: 1fr 280px;
+    gap: 55px;
     align-items: center;
 }
 
@@ -96,14 +96,32 @@ a {
 .hero-card {
     border: 1px solid rgba(255, 255, 255, .2);
     border-radius: 18px;
-    padding: 0 24px 24px;
+    padding: 0 20px 18px;
     background: rgba(255, 255, 255, .07);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
     overflow: hidden;
 }
 
+.hero-card .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.hero-card .contact-item i {
+    width: 18px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.hero-card .contact-item a,
+.hero-card .contact-item span {
+    margin: 0;
+}
 .hero-card a {
     color: #dbe9f7;
 }
@@ -111,13 +129,13 @@ a {
 /* Profile Photo */
 .profile-photo {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     object-position: center top;
     display: block;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 0;
-    margin: 0 0 24px;
+    margin: 0 0 18px;
 }
 
 /* Old initials style - kept for compatibility */
