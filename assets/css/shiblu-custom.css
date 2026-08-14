@@ -130,3 +130,110 @@ body { background:#fff; color:var(--ink); }
 #contact a {
   color: #fff;
 }
+/* =========================================================
+   RECENT WORKS — PROFESSIONAL NON-CLICKABLE GALLERY
+   ========================================================= */
+
+.recent-work {
+  position: relative;
+  margin-bottom: 2.5em;
+}
+
+.recent-work .image {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 1.25em;
+  cursor: default;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+/* Image */
+.recent-work .image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+/* Subtle dark overlay */
+.recent-work .image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.45s ease;
+  pointer-events: none;
+}
+
+/* Hover effect */
+.recent-work:hover .image img {
+  transform: scale(1.035);
+  filter: brightness(0.88);
+}
+
+.recent-work:hover .image::after {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.recent-work h3 {
+  margin: 0 0 0.35em 0;
+  font-size: 1.05em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Description */
+.recent-work p {
+  margin: 0;
+  font-size: 0.88em;
+  line-height: 1.7;
+  opacity: 0.72;
+}
+
+/* Remove clickable behavior */
+.recent-work a,
+.recent-work .image {
+  cursor: default;
+}
+
+/* Prevent image dragging */
+.recent-work img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 736px) {
+
+  .recent-work {
+    margin-bottom: 2em;
+  }
+
+  .recent-work .image {
+    border-radius: 8px;
+    margin-bottom: 1em;
+  }
+
+  .recent-work h3 {
+    font-size: 1em;
+  }
+
+  .recent-work p {
+    font-size: 0.85em;
+  }
+
+  .recent-work:hover .image img {
+    transform: scale(1.02);
+  }
+}
