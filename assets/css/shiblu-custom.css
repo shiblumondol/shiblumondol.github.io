@@ -241,181 +241,159 @@ body { background:#fff; color:var(--ink); }
   pointer-events: none;
   cursor: default;
 }
-/* =========================================================
-   RECENT WORKS — NON-CLICKABLE PROFESSIONAL GALLERY
-   ========================================================= */
+/* =========================================
+   RECENT WORKS — 4 IMAGE PORTFOLIO GRID
+   ========================================= */
 
 #recent-work-gallery {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 2.2em 1.8em;
-  margin-top: 3em;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 2.5em 2em;
+    margin-top: 3em;
 }
 
-/* Individual cards */
+/* All cards */
 #recent-work-gallery .work-card {
-  grid-column: span 6;
-  margin: 0;
+    margin: 0;
 }
 
-/* Featured card */
-#recent-work-gallery .work-card-featured {
-  grid-column: span 7;
+/* First image — featured */
+#recent-work-gallery .work-card:nth-child(1) {
+    grid-row: span 2;
 }
 
-/* Wide card */
-#recent-work-gallery .work-card-wide {
-  grid-column: span 7;
-}
-
-/* Normal cards */
-#recent-work-gallery .work-card:not(.work-card-featured):not(.work-card-wide) {
-  grid-column: span 5;
+/* Third image — wide */
+#recent-work-gallery .work-card:nth-child(3) {
+    grid-column: 1 / -1;
 }
 
 /* Image container */
 #recent-work-gallery .work-image {
-  position: relative;
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #eee;
-  cursor: default;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #eee;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
 }
 
-/* Image */
+/* Images */
 #recent-work-gallery .work-image img {
-  display: block;
-  width: 100%;
-  height: 360px;
-  margin: 0;
-  object-fit: cover;
-  transition:
-    transform 0.55s cubic-bezier(.2,.7,.2,1),
-    filter 0.55s ease;
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
 }
 
 /* Featured image */
-#recent-work-gallery .work-card-featured .work-image img {
-  height: 500px;
+#recent-work-gallery .work-card:nth-child(1) .work-image img {
+    height: 100%;
+    min-height: 520px;
 }
 
 /* Wide image */
-#recent-work-gallery .work-card-wide .work-image img {
-  height: 430px;
+#recent-work-gallery .work-card:nth-child(3) .work-image img {
+    height: 380px;
 }
 
-/* Hover overlay */
+/* Hover */
 #recent-work-gallery .work-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.45s ease;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    transition: background 0.4s ease;
+    pointer-events: none;
 }
 
-/* Hover effect */
 #recent-work-gallery .work-card:hover .work-image img {
-  transform: scale(1.045);
-  filter: brightness(0.90);
+    transform: scale(1.04);
+    filter: brightness(0.9);
 }
 
 #recent-work-gallery .work-card:hover .work-image::after {
-  background: rgba(0, 0, 0, 0.08);
+    background: rgba(0,0,0,0.08);
 }
 
-/* Text area */
+/* Text */
 #recent-work-gallery .work-body {
-  padding: 1.25em 0.15em 0;
+    padding: 1.2em 0.15em 0;
 }
 
-/* Number */
 #recent-work-gallery .work-number {
-  font-size: 0.68em;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  opacity: 0.48;
-  margin-bottom: 0.65em;
+    font-size: 0.68em;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    opacity: 0.45;
+    margin-bottom: 0.6em;
 }
 
-/* Title */
 #recent-work-gallery .work-body h3 {
-  margin: 0 0 0.45em;
-  font-size: 1.15em;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+    margin: 0 0 0.4em;
 }
 
-/* Description */
 #recent-work-gallery .work-body p {
-  margin: 0;
-  max-width: 42em;
-  font-size: 0.88em;
-  line-height: 1.75;
-  opacity: 0.68;
+    margin: 0;
+    font-size: 0.88em;
+    line-height: 1.7;
+    opacity: 0.68;
 }
 
-/* =========================================================
+
+/* =========================================
    TABLET
-   ========================================================= */
+   ========================================= */
 
 @media screen and (max-width: 980px) {
 
-  #recent-work-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2em 1.3em;
-  }
+    #recent-work-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 2em 1.5em;
+    }
 
-  #recent-work-gallery .work-card,
-  #recent-work-gallery .work-card-featured,
-  #recent-work-gallery .work-card-wide,
-  #recent-work-gallery .work-card:not(.work-card-featured):not(.work-card-wide) {
-    grid-column: span 1;
-  }
+    #recent-work-gallery .work-card:nth-child(1) {
+        grid-row: auto;
+    }
 
-  #recent-work-gallery .work-image img,
-  #recent-work-gallery .work-card-featured .work-image img,
-  #recent-work-gallery .work-card-wide .work-image img {
-    height: 340px;
-  }
+    #recent-work-gallery .work-card:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+    #recent-work-gallery .work-card:nth-child(1) .work-image img,
+    #recent-work-gallery .work-image img {
+        height: 330px;
+        min-height: 0;
+    }
+
+    #recent-work-gallery .work-card:nth-child(3) .work-image img {
+        height: 360px;
+    }
 }
 
-/* =========================================================
+
+/* =========================================
    MOBILE
-   ========================================================= */
+   ========================================= */
 
 @media screen and (max-width: 736px) {
 
-  #recent-work-gallery {
-    display: block;
-    margin-top: 2em;
-  }
+    #recent-work-gallery {
+        display: block;
+    }
 
-  #recent-work-gallery .work-card,
-  #recent-work-gallery .work-card-featured,
-  #recent-work-gallery .work-card-wide {
-    margin-bottom: 2.5em;
-  }
+    #recent-work-gallery .work-card,
+    #recent-work-gallery .work-card:nth-child(1),
+    #recent-work-gallery .work-card:nth-child(3) {
+        margin-bottom: 2.5em;
+    }
 
-  #recent-work-gallery .work-image img,
-  #recent-work-gallery .work-card-featured .work-image img,
-  #recent-work-gallery .work-card-wide .work-image img {
-    height: 300px;
-  }
-
-  #recent-work-gallery .work-body {
-    padding-top: 1em;
-  }
-
-  #recent-work-gallery .work-body h3 {
-    font-size: 1.05em;
-  }
-
-  #recent-work-gallery .work-body p {
-    font-size: 0.84em;
-  }
+    #recent-work-gallery .work-image img,
+    #recent-work-gallery .work-card:nth-child(1) .work-image img,
+    #recent-work-gallery .work-card:nth-child(3) .work-image img {
+        height: 300px;
+        min-height: 0;
+    }
 }
