@@ -237,3 +237,7 @@ body { background:#fff; color:var(--ink); }
     transform: scale(1.02);
   }
 }
+.recent-work a {
+  pointer-events: none;
+  cursor: default;
+}
