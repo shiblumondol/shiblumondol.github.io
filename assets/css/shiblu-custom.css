@@ -241,3 +241,181 @@ body { background:#fff; color:var(--ink); }
   pointer-events: none;
   cursor: default;
 }
+/* =========================================================
+   RECENT WORKS — NON-CLICKABLE PROFESSIONAL GALLERY
+   ========================================================= */
+
+#recent-work-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2.2em 1.8em;
+  margin-top: 3em;
+}
+
+/* Individual cards */
+#recent-work-gallery .work-card {
+  grid-column: span 6;
+  margin: 0;
+}
+
+/* Featured card */
+#recent-work-gallery .work-card-featured {
+  grid-column: span 7;
+}
+
+/* Wide card */
+#recent-work-gallery .work-card-wide {
+  grid-column: span 7;
+}
+
+/* Normal cards */
+#recent-work-gallery .work-card:not(.work-card-featured):not(.work-card-wide) {
+  grid-column: span 5;
+}
+
+/* Image container */
+#recent-work-gallery .work-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #eee;
+  cursor: default;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+/* Image */
+#recent-work-gallery .work-image img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  margin: 0;
+  object-fit: cover;
+  transition:
+    transform 0.55s cubic-bezier(.2,.7,.2,1),
+    filter 0.55s ease;
+}
+
+/* Featured image */
+#recent-work-gallery .work-card-featured .work-image img {
+  height: 500px;
+}
+
+/* Wide image */
+#recent-work-gallery .work-card-wide .work-image img {
+  height: 430px;
+}
+
+/* Hover overlay */
+#recent-work-gallery .work-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.45s ease;
+  pointer-events: none;
+}
+
+/* Hover effect */
+#recent-work-gallery .work-card:hover .work-image img {
+  transform: scale(1.045);
+  filter: brightness(0.90);
+}
+
+#recent-work-gallery .work-card:hover .work-image::after {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Text area */
+#recent-work-gallery .work-body {
+  padding: 1.25em 0.15em 0;
+}
+
+/* Number */
+#recent-work-gallery .work-number {
+  font-size: 0.68em;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.48;
+  margin-bottom: 0.65em;
+}
+
+/* Title */
+#recent-work-gallery .work-body h3 {
+  margin: 0 0 0.45em;
+  font-size: 1.15em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Description */
+#recent-work-gallery .work-body p {
+  margin: 0;
+  max-width: 42em;
+  font-size: 0.88em;
+  line-height: 1.75;
+  opacity: 0.68;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 980px) {
+
+  #recent-work-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em 1.3em;
+  }
+
+  #recent-work-gallery .work-card,
+  #recent-work-gallery .work-card-featured,
+  #recent-work-gallery .work-card-wide,
+  #recent-work-gallery .work-card:not(.work-card-featured):not(.work-card-wide) {
+    grid-column: span 1;
+  }
+
+  #recent-work-gallery .work-image img,
+  #recent-work-gallery .work-card-featured .work-image img,
+  #recent-work-gallery .work-card-wide .work-image img {
+    height: 340px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 736px) {
+
+  #recent-work-gallery {
+    display: block;
+    margin-top: 2em;
+  }
+
+  #recent-work-gallery .work-card,
+  #recent-work-gallery .work-card-featured,
+  #recent-work-gallery .work-card-wide {
+    margin-bottom: 2.5em;
+  }
+
+  #recent-work-gallery .work-image img,
+  #recent-work-gallery .work-card-featured .work-image img,
+  #recent-work-gallery .work-card-wide .work-image img {
+    height: 300px;
+  }
+
+  #recent-work-gallery .work-body {
+    padding-top: 1em;
+  }
+
+  #recent-work-gallery .work-body h3 {
+    font-size: 1.05em;
+  }
+
+  #recent-work-gallery .work-body p {
+    font-size: 0.84em;
+  }
+}
