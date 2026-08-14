@@ -13,7 +13,13 @@ body { background:#fff; color:var(--ink); }
 .sidebar-links { display:flex; gap:1.1em; }
 .sidebar-links a { border-bottom:0 !important; color:rgba(255,255,255,.8) !important; font-size:1.25em; transition:.2s ease; }
 .sidebar-links a:hover { color:#fff !important; transform:translateY(-2px); }
-#main { max-width:70em; padding-top:7em; }
+#main {
+  max-width:70em;
+  padding-top:7em;
+  background:
+    linear-gradient(rgba(255,255,255,.90), rgba(255,255,255,.90)),
+    url('../../images/sidebar-bg.jpg') center/cover fixed;
+}
 #hero .major h2 { font-size:2.65em; line-height:1.18em; letter-spacing:-.035em; margin-bottom:.6em; }
 #hero .major:after, .section-heading:after { content:""; display:block; width:52px; height:3px; background:var(--gold); margin:1.2em 0 1.5em; }
 .lead { font-size:1.08em; line-height:1.9em; color:#59626a; max-width:58em; }
