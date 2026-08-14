@@ -1,166 +1,103 @@
-/* =========================================================
-   SHIBLU MONDOL — PERSONAL PORTFOLIO
-   FINAL MASTER STYLESHEET
-   ========================================================= */
-
-
-/* =========================================================
-   ROOT / GLOBAL
-   ========================================================= */
-
 :root {
-    --gold: #c9a45c;
-    --gold-dark: #a57e37;
-
-    --ink: #1d252c;
-    --muted: #6f7780;
-    --line: #e7e9eb;
-
-    --white: #ffffff;
-    --soft: #f7f8f9;
-
-    --dark: #11171d;
-    --dark-2: #0b0f13;
+  --gold: #c9a45c;
+  --ink: #1d252c;
+  --muted: #6f7780;
+  --line: #e7e9eb;
 }
-
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-
 
 body {
-    background: #fff;
-    color: var(--ink);
+  background: #fff;
+  color: var(--ink);
 }
-
 
 /* =========================================================
    SIDEBAR / HEADER
    ========================================================= */
 
 #header {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(10, 18, 25, .72),
-            rgba(10, 14, 18, .96)
-        ),
-        url('../../images/sidebar-bg.jpg')
-        center / cover fixed;
-
-    box-shadow:
-        inset -1px 0 rgba(255,255,255,.06);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(10, 18, 25, 0.72),
+      rgba(10, 14, 18, 0.96)
+    ),
+    url("../../images/sidebar-bg.jpg") center / cover fixed;
+  box-shadow: inset -1px 0 rgba(255, 255, 255, 0.06);
 }
-
 
 #header .inner {
-    max-width: 34em;
+  max-width: 34em;
 }
-
-
-/* =========================================================
-   PROFILE PHOTO
-   ========================================================= */
 
 .profile-frame {
-    width: 100%;
-    max-width: 270px;
-
-    aspect-ratio: 4 / 5;
-
-    margin: 0 auto 1.6em;
-
-    overflow: hidden;
-
-    border: 1px solid rgba(255,255,255,.25);
-    border-radius: 12px;
-
-    box-shadow:
-        0 18px 50px rgba(0,0,0,.30);
-
-    background: #222;
+  width: 100%;
+  max-width: 270px;
+  aspect-ratio: 4 / 5;
+  margin: 0 auto 1.6em;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+  background: #222;
 }
-
 
 .profile-frame img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center 32%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+  display: block;
 }
-
-
-/* =========================================================
-   SIDEBAR TYPOGRAPHY
-   ========================================================= */
 
 #header h1 {
-    font-size: 1.6em;
-    line-height: 1.25em;
-    letter-spacing: -.02em;
+  font-size: 1.6em;
+  line-height: 1.25em;
+  letter-spacing: -0.02em;
 }
-
 
 #header h1 strong {
-    color: #fff;
+  color: #fff;
 }
-
 
 .sidebar-role {
-    color: rgba(255,255,255,.80);
-
-    font-size: 1.05em;
-    line-height: 1.6em;
-
-    margin: .5em 0 .65em;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.05em;
+  line-height: 1.6em;
+  margin: 0.5em 0 0.65em;
 }
-
 
 .sidebar-tags {
-    color: rgba(255,255,255,.55);
-
-    font-size: .88em;
-    line-height: 1.6em;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.88em;
+  line-height: 1.6em;
 }
-
 
 .sidebar-divider {
-    width: 54px;
-    height: 2px;
-
-    background: var(--gold);
-
-    margin: 1.5em 0 1.2em;
+  width: 54px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.5em 0 1.2em;
 }
-
-
-/* Sidebar links */
 
 .sidebar-links {
-    display: flex;
-    gap: 1.1em;
+  display: flex;
+  gap: 1.1em;
 }
-
 
 .sidebar-links a {
-    border-bottom: 0 !important;
-
-    color: rgba(255,255,255,.80) !important;
-
-    font-size: 1.25em;
-
-    transition: .2s ease;
+  border-bottom: 0 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 1.25em;
+  transition: 0.2s ease;
 }
 
-
 .sidebar-links a:hover {
-    color: #fff !important;
-
-    transform: translateY(-2px);
+  color: #fff !important;
+  transform: translateY(-2px);
 }
 
 
@@ -169,120 +106,73 @@ body {
    ========================================================= */
 
 #main {
-    max-width: 70em;
-
-    padding-top: 7em;
+  max-width: 70em;
+  padding-top: 7em;
 }
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
 
 #hero .major h2 {
-    font-size: 2.65em;
-
-    line-height: 1.18em;
-
-    letter-spacing: -.035em;
-
-    margin-bottom: .6em;
+  font-size: 2.65em;
+  line-height: 1.18em;
+  letter-spacing: -0.035em;
+  margin-bottom: 0.6em;
 }
-
 
 #hero .major:after,
 .section-heading:after {
-    content: "";
-
-    display: block;
-
-    width: 52px;
-    height: 3px;
-
-    background: var(--gold);
-
-    margin: 1.2em 0 1.5em;
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--gold);
+  margin: 1.2em 0 1.5em;
 }
-
 
 .lead {
-    font-size: 1.08em;
-
-    line-height: 1.9em;
-
-    color: #59626a;
-
-    max-width: 58em;
+  font-size: 1.08em;
+  line-height: 1.9em;
+  color: #59626a;
+  max-width: 58em;
 }
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
 
 .button.primary {
-    background: var(--gold);
-
-    border-color: var(--gold);
-
-    color: #fff !important;
-
-    box-shadow: none;
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff !important;
+  box-shadow: none;
 }
-
 
 .button.primary:hover {
-    background: #b88f43;
-
-    border-color: #b88f43;
+  background: #b88f43;
+  border-color: #b88f43;
 }
-
 
 .hero-actions {
-    margin: 2em 0 2.2em;
+  margin: 2em 0 2.2em;
 }
-
-
-/* =========================================================
-   HERO STATS
-   ========================================================= */
 
 .hero-stats {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 1em;
-
-    padding-top: 1.7em;
-
-    border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding-top: 1.7em;
+  border-top: 1px solid var(--line);
 }
-
 
 .hero-stats div {
-    padding: .2em 0;
+  padding: 0.2em 0;
 }
-
 
 .hero-stats strong {
-    display: block;
-
-    font-size: 1.7em;
-
-    color: var(--ink);
+  display: block;
+  font-size: 1.7em;
+  color: var(--ink);
 }
 
-
 .hero-stats span {
-    display: block;
-
-    color: #7a838b;
-
-    font-size: .82em;
-
-    margin-top: .2em;
+  display: block;
+  color: #7a838b;
+  font-size: 0.82em;
+  margin-top: 0.2em;
 }
 
 
@@ -291,25 +181,19 @@ body {
    ========================================================= */
 
 .section-heading h2 {
-    margin-bottom: .35em;
+  margin-bottom: 0.35em;
 }
-
 
 .section-heading p {
-    color: #7a838b;
-
-    margin-bottom: 2em;
+  color: #7a838b;
+  margin-bottom: 2em;
 }
 
-
 .eyebrow {
-    color: var(--gold-dark);
-
-    font-size: .72em;
-
-    font-weight: 700;
-
-    letter-spacing: .18em;
+  color: #a57e37;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
 }
 
 
@@ -318,93 +202,62 @@ body {
    ========================================================= */
 
 .timeline {
-    position: relative;
-
-    margin-top: 2.5em;
+  position: relative;
+  margin-top: 2.5em;
 }
-
 
 .timeline:before {
-    content: "";
-
-    position: absolute;
-
-    left: 145px;
-    top: 0;
-    bottom: 0;
-
-    width: 1px;
-
-    background: var(--line);
+  content: "";
+  position: absolute;
+  left: 145px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--line);
 }
-
 
 .timeline-item {
-    display: grid;
-
-    grid-template-columns: 125px 1fr;
-
-    gap: 40px;
-
-    position: relative;
-
-    padding-bottom: 2.4em;
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  gap: 40px;
+  position: relative;
+  padding-bottom: 2.4em;
 }
-
 
 .timeline-item:before {
-    content: "";
-
-    position: absolute;
-
-    left: 141px;
-    top: .45em;
-
-    width: 9px;
-    height: 9px;
-
-    border-radius: 50%;
-
-    background: var(--gold);
-
-    box-shadow:
-        0 0 0 4px #fff;
+  content: "";
+  position: absolute;
+  left: 141px;
+  top: 0.45em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px #fff;
 }
-
 
 .timeline-date {
-    font-size: .7em;
-
-    font-weight: 700;
-
-    letter-spacing: .08em;
-
-    color: #9a7a3f;
-
-    line-height: 1.5em;
-
-    padding-top: .15em;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #9a7a3f;
+  line-height: 1.5em;
+  padding-top: 0.15em;
 }
-
 
 .timeline-content h3 {
-    margin-bottom: .25em;
+  margin-bottom: 0.25em;
 }
-
 
 .timeline-content .company {
-    color: #58626a;
-
-    font-weight: 600;
-
-    margin-bottom: .7em;
+  color: #58626a;
+  font-weight: 600;
+  margin-bottom: 0.7em;
 }
 
-
 .timeline-content p:last-child {
-    color: #69727a;
-
-    line-height: 1.75em;
+  color: #69727a;
+  line-height: 1.75em;
 }
 
 
@@ -413,352 +266,71 @@ body {
    ========================================================= */
 
 .skill-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 1.1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1em;
 }
-
 
 .skill-card {
-    border: 1px solid var(--line);
-
-    padding: 1.5em;
-
-    border-radius: 10px;
-
-    background: #fff;
-
-    transition: .2s ease;
+  border: 1px solid var(--line);
+  padding: 1.5em;
+  border-radius: 10px;
+  background: #fff;
+  transition: 0.2s ease;
 }
-
 
 .skill-card:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 12px 30px rgba(30,40,50,.07);
-
-    border-color: #d8c49d;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(30, 40, 50, 0.07);
+  border-color: #d8c49d;
 }
-
 
 .skill-card .icon {
-    color: var(--gold);
-
-    font-size: 1.4em;
-
-    margin-bottom: .7em;
+  color: var(--gold);
+  font-size: 1.4em;
+  margin-bottom: 0.7em;
 }
-
 
 .skill-card h3 {
-    font-size: 1.05em;
-
-    margin-bottom: .45em;
+  font-size: 1.05em;
+  margin-bottom: 0.45em;
 }
-
 
 .skill-card p {
-    color: #737c84;
-
-    font-size: .9em;
-
-    line-height: 1.65em;
-
-    margin: 0;
+  color: #737c84;
+  font-size: 0.9em;
+  line-height: 1.65em;
+  margin: 0;
 }
 
 
 /* =========================================================
-   GENERAL WORK GRID
-   ========================================================= */
-
-.work-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 1.5em;
-}
-
-
-.work-card {
-    border: 1px solid var(--line);
-
-    border-radius: 10px;
-
-    overflow: hidden;
-
-    background: #fff;
-
-    transition: .2s ease;
-}
-
-
-.work-card:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 15px 34px rgba(30,40,50,.09);
-}
-
-
-/* =========================================================
-   RECENT WORKS
-   FINAL 4-IMAGE GALLERY
-   ========================================================= */
-
-#recent-work-gallery {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 1.8em;
-
-    margin-top: 2.5em;
-
-    align-items: start;
-}
-
-
-/* =========================================================
-   RECENT WORK CARD
-   ========================================================= */
-
-#recent-work-gallery .work-card {
-
-    width: 100%;
-
-    min-width: 0;
-
-    margin: 0;
-
-    padding: 0;
-
-    overflow: hidden;
-
-    border: 1px solid var(--line);
-
-    border-radius: 12px;
-
-    background: #fff;
-
-    box-shadow:
-        0 8px 25px rgba(30,40,50,.06);
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
-}
-
-
-#recent-work-gallery .work-card:hover {
-
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 16px 35px rgba(30,40,50,.10);
-}
-
-
-/* =========================================================
-   RECENT WORK IMAGE
-   IMPORTANT:
-   Natural height
-   No forced 16:9
-   No cropping
-   ========================================================= */
-
-#recent-work-gallery .work-image {
-
-    position: relative;
-
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    margin: 0;
-
-    padding: 0;
-
-    overflow: hidden;
-
-    border: 0 !important;
-
-    border-radius: 0;
-
-    background: #f3f4f5;
-
-    cursor: default;
-
-    pointer-events: none;
-}
-
-
-/* Image itself */
-
-#recent-work-gallery .work-image img {
-
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    max-width: 100%;
-
-    margin: 0;
-
-    padding: 0;
-
-    object-fit: contain;
-
-    user-select: none;
-
-    -webkit-user-drag: none;
-
-    transition:
-        transform .45s ease,
-        filter .35s ease;
-}
-
-
-/* Very subtle hover */
-
-#recent-work-gallery .work-card:hover
-.work-image img {
-
-    transform: scale(1.015);
-
-    filter: brightness(.97);
-}
-
-
-/* =========================================================
-   DISABLE IMAGE CLICK
-   ========================================================= */
-
-#recent-work-gallery .work-image,
-#recent-work-gallery .work-image:hover,
-#recent-work-gallery .work-image:focus {
-
-    cursor: default;
-
-    pointer-events: none;
-}
-
-
-/* Hide View button */
-
-#recent-work-gallery .work-view {
-
-    display: none !important;
-}
-
-
-/* =========================================================
-   RECENT WORK TEXT
-   ========================================================= */
-
-#recent-work-gallery .work-body {
-
-    padding:
-        1.15em
-        1.25em
-        1.3em;
-}
-
-
-#recent-work-gallery .work-number {
-
-    margin-bottom: .45em;
-
-    color: var(--gold-dark);
-
-    font-size: .68em;
-
-    font-weight: 800;
-
-    letter-spacing: .14em;
-}
-
-
-#recent-work-gallery .work-body h3 {
-
-    margin: 0 0 .4em;
-
-    color: var(--ink);
-
-    font-size: 1.03em;
-
-    line-height: 1.35em;
-}
-
-
-#recent-work-gallery .work-body p {
-
-    margin: 0;
-
-    color: #747d84;
-
-    font-size: .87em;
-
-    line-height: 1.65em;
-}
-
-
-/* =========================================================
-   REMOVE OLD GALLERY / LIGHTBOX ELEMENTS
-   ========================================================= */
-
-.gallery-lightbox,
-.gallery-backdrop,
-.gallery-dialog,
-.gallery-figure,
-.gallery-caption,
-.gallery-full,
-.gallery-close,
-.gallery-nav {
-
-    display: none !important;
-}
-
-
-/* =========================================================
-   TRAINING / EDUCATION
+   TRAINING & EDUCATION
+   SIDE-BY-SIDE
    ========================================================= */
 
 .training-row {
-
-    margin-top: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3em;
+  margin-top: 1.5em;
 }
 
+.training-row > div {
+  min-width: 0;
+}
 
 .compact-list li {
-
-    margin-bottom: 1.2em;
+  margin-bottom: 1.2em;
 }
-
 
 .compact-list strong {
-
-    color: var(--ink);
+  color: var(--ink);
 }
 
-
 .compact-list span {
-
-    color: #778089;
-
-    font-size: .9em;
+  color: #778089;
+  font-size: 0.9em;
 }
 
 
@@ -767,12 +339,134 @@ body {
    ========================================================= */
 
 .about-lead {
+  font-size: 1.15em;
+  line-height: 1.8em;
+  color: #4f5961;
+}
 
-    font-size: 1.15em;
 
-    line-height: 1.8em;
+/* =========================================================
+   RECENT WORKS
+   4 IMAGES
+   NON-CLICKABLE
+   NATURAL IMAGE RATIO
+   ========================================================= */
 
-    color: #4f5961;
+#recent-work-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2em;
+  margin-top: 2.5em;
+}
+
+#recent-work-gallery .work-card {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(30, 40, 50, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#recent-work-gallery .work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(30, 40, 50, 0.1);
+}
+
+
+/* IMAGE CONTAINER */
+
+#recent-work-gallery .work-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 0;
+  background: #f1f1f1;
+  cursor: default;
+  pointer-events: none;
+}
+
+
+/* IMAGE — NATURAL RATIO */
+
+#recent-work-gallery .work-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  object-fit: contain;
+  transition:
+    transform 0.45s ease,
+    filter 0.35s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+
+/* SUBTLE HOVER */
+
+#recent-work-gallery .work-card:hover .work-image img {
+  transform: scale(1.018);
+  filter: brightness(0.96);
+}
+
+
+/* REMOVE VIEW BUTTON */
+
+#recent-work-gallery .work-view {
+  display: none !important;
+}
+
+
+/* TEXT */
+
+#recent-work-gallery .work-body {
+  padding: 1.25em 1.35em 1.4em;
+}
+
+#recent-work-gallery .work-number {
+  margin-bottom: 0.5em;
+  color: #a57e37;
+  font-size: 0.68em;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+#recent-work-gallery .work-body h3 {
+  margin: 0 0 0.45em;
+  font-size: 1.05em;
+  line-height: 1.35em;
+}
+
+#recent-work-gallery .work-body p {
+  margin: 0;
+  color: #747d84;
+  font-size: 0.88em;
+  line-height: 1.7em;
+}
+
+
+/* REMOVE LINK INTERACTION */
+
+#recent-work-gallery .work-image a,
+#recent-work-gallery .work-image:hover,
+#recent-work-gallery .work-image:focus {
+  cursor: default;
+}
+
+#recent-work-gallery a {
+  pointer-events: none;
+  cursor: default;
 }
 
 
@@ -781,28 +475,18 @@ body {
    ========================================================= */
 
 #contact {
-
-    position: relative;
-
-    overflow: hidden;
-
-    padding: 4em 3em !important;
-
-    border-radius: 12px;
-
-    border: 1px solid rgba(255,255,255,.12);
-
-    background:
-
-        linear-gradient(
-            rgba(0,0,0,.60),
-            rgba(0,0,0,.60)
-        ),
-
-        url('../../images/opportunity.jpg')
-        center center / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding: 4em 3em !important;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../../images/opportunity.jpg") center center / cover no-repeat;
 }
-
 
 #contact,
 #contact h2,
@@ -810,14 +494,11 @@ body {
 #contact p,
 #contact li,
 #contact a {
-
-    color: #fff;
+  color: #fff;
 }
 
-
 .contact-actions {
-
-    margin-top: 1.8em;
+  margin-top: 1.8em;
 }
 
 
@@ -826,45 +507,11 @@ body {
    ========================================================= */
 
 #footer {
-
-    background:
-        linear-gradient(
-            180deg,
-            #11171d,
-            #0b0f13
-        );
+  background: linear-gradient(180deg, #11171d, #0b0f13);
 }
-
 
 #footer .copyright {
-
-    color:
-        rgba(255,255,255,.5);
-}
-
-
-/* =========================================================
-   DESKTOP — RECENT WORK IMAGE SIZE
-   ========================================================= */
-
-@media screen and (min-width: 981px) {
-
-    #recent-work-gallery
-    .work-image img {
-
-        /*
-         * Keeps the gallery visually compact
-         * while preserving the original ratio.
-         */
-
-        max-height: 340px;
-
-        width: 100%;
-
-        height: auto;
-
-        object-fit: contain;
-    }
+  color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -874,56 +521,27 @@ body {
 
 @media screen and (max-width: 980px) {
 
-    #main {
+  #main {
+    padding-top: 4em;
+  }
 
-        padding-top: 4em;
-    }
+  #hero .major h2 {
+    font-size: 2.15em;
+  }
 
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    #hero .major h2 {
+  .training-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2em;
+  }
 
-        font-size: 2.15em;
-    }
-
-
-    .skill-grid {
-
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-
-    /* Recent Work */
-
-    #recent-work-gallery {
-
-        grid-template-columns:
-            repeat(2, minmax(0,1fr));
-
-        gap: 1.4em;
-    }
-
-
-    #recent-work-gallery
-    .work-image img {
-
-        width: 100%;
-
-        height: auto;
-
-        max-height: none;
-    }
-
-
-    #recent-work-gallery
-    .work-body {
-
-        padding:
-            1em
-            1.1em
-            1.15em;
-    }
-
+  #recent-work-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5em;
+  }
 }
 
 
@@ -933,164 +551,87 @@ body {
 
 @media screen and (max-width: 736px) {
 
-    #header {
+  #header {
+    background-attachment: scroll;
+  }
 
-        background-attachment:
-            scroll;
-    }
+  #header .inner {
+    padding: 2em 1.5em;
+  }
 
+  .profile-frame {
+    max-width: 230px;
+  }
 
-    #header .inner {
+  #main {
+    width: 100%;
+    margin: 0;
+    padding: 3em 1.5em;
+  }
 
-        padding:
-            2em 1.5em;
-    }
+  #hero .major h2 {
+    font-size: 2em;
+  }
 
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 0.8em;
+  }
 
-    .profile-frame {
+  .timeline:before {
+    left: 6px;
+  }
 
-        max-width: 230px;
-    }
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+    padding-left: 28px;
+  }
 
+  .timeline-item:before {
+    left: 2px;
+  }
 
-    #main {
+  .timeline-date {
+    padding-top: 0;
+  }
 
-        width: 100%;
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
 
-        margin: 0;
 
-        padding:
-            3em 1.5em;
-    }
+  /* TRAINING + EDUCATION ON MOBILE */
 
+  .training-row {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
 
-    #hero .major h2 {
 
-        font-size: 2em;
-    }
+  /* RECENT WORKS ON MOBILE */
 
+  #recent-work-gallery {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
 
-    .hero-stats {
+  #recent-work-gallery .work-body {
+    padding: 1.1em 1.15em 1.25em;
+  }
 
-        grid-template-columns: 1fr;
+  #recent-work-gallery .work-body h3 {
+    font-size: 1em;
+  }
 
-        gap: .8em;
-    }
+  #recent-work-gallery .work-body p {
+    font-size: 0.85em;
+  }
 
 
-    /* Timeline */
+  /* CONTACT */
 
-    .timeline:before {
-
-        left: 6px;
-    }
-
-
-    .timeline-item {
-
-        grid-template-columns: 1fr;
-
-        gap: .5em;
-
-        padding-left: 28px;
-    }
-
-
-    .timeline-item:before {
-
-        left: 2px;
-    }
-
-
-    .timeline-date {
-
-        padding-top: 0;
-    }
-
-
-    /* Skills */
-
-    .skill-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    /* Recent Work */
-
-    #recent-work-gallery {
-
-        grid-template-columns: 1fr;
-
-        gap: 1.5em;
-    }
-
-
-    #recent-work-gallery
-    .work-image img {
-
-        width: 100%;
-
-        height: auto;
-
-        max-height: none;
-    }
-
-
-    #recent-work-gallery
-    .work-body {
-
-        padding:
-            1em
-            1.1em
-            1.2em;
-    }
-
-
-    #recent-work-gallery
-    .work-body h3 {
-
-        font-size: 1em;
-    }
-
-
-    #recent-work-gallery
-    .work-body p {
-
-        font-size: .85em;
-    }
-
-
-    /* Contact */
-
-    #contact {
-
-        padding:
-            2em !important;
-    }
-
-}
-
-
-/* =========================================================
-   VERY SMALL MOBILE
-   ========================================================= */
-
-@media screen and (max-width: 480px) {
-
-    #recent-work-gallery {
-
-        gap: 1.25em;
-    }
-
-
-    #recent-work-gallery
-    .work-body {
-
-        padding:
-            .95em
-            1em
-            1.1em;
-    }
-
+  #contact {
+    padding: 2em !important;
+  }
 }
