@@ -94,3 +94,11 @@ body { background:#fff; color:var(--ink); }
   padding: 4em 3em;
   border-radius: 8px;
 }
+#contact,
+#contact h2,
+#contact h3,
+#contact p,
+#contact li,
+#contact a {
+  color: #fff;
+}
