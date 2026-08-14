@@ -394,72 +394,54 @@ body {
 
 
 /* =========================================================
-   RECENT WORKS
-   4 IMAGE GRID
-   Original Image Proportions
-   NON-CLICKABLE
+   RECENT WORKS — 4 IMAGE PROFESSIONAL GRID
+   Original Image Ratio • Balanced Size • Non-clickable
    ========================================================= */
 
 #recent-work-gallery {
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 2em;
-
-    margin-top: 2.5em;
+    gap: 1.8em;
+    margin-top: 2.2em;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    CARD
-   --------------------------------------------------------- */
+   ========================= */
 
 #recent-work-gallery .work-card {
     min-width: 0;
-
     margin: 0;
-
     overflow: hidden;
 
     border: 1px solid var(--line);
-
     border-radius: 12px;
-
     background: #fff;
 
-    box-shadow:
-        0 8px 24px rgba(30, 40, 50, 0.06);
+    box-shadow: 0 7px 22px rgba(30, 40, 50, 0.06);
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 #recent-work-gallery .work-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 16px 35px rgba(30, 40, 50, 0.10);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(30, 40, 50, 0.10);
 }
 
 
-/* ---------------------------------------------------------
-   IMAGE CONTAINER
-   --------------------------------------------------------- */
-
-/*
-   IMPORTANT:
-   No fixed height.
-   The image keeps its original aspect ratio.
-*/
+/* =========================
+   IMAGE AREA
+   ========================= */
 
 #recent-work-gallery .work-image {
     display: block;
-
     position: relative;
 
-    height: auto !important;
+    width: 100%;
+    height: auto;
 
     margin: 0;
     padding: 0;
@@ -467,40 +449,35 @@ body {
     overflow: hidden;
 
     border: 0 !important;
-
     border-radius: 0;
 
-    background: #f1f1f1;
+    background: #f3f3f3;
 
     cursor: default;
-
-    pointer-events: none;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    IMAGE
-   --------------------------------------------------------- */
+   ========================= */
 
 #recent-work-gallery .work-image img {
     display: block;
 
     width: 100%;
-
-    height: auto !important;
+    height: auto;
 
     max-width: 100%;
 
     margin: 0;
 
-    object-fit: initial;
+    object-fit: contain;
 
     transition:
-        transform 0.45s ease,
+        transform 0.4s ease,
         filter 0.35s ease;
 
     user-select: none;
-
     -webkit-user-drag: none;
 }
 
@@ -509,56 +486,54 @@ body {
 
 #recent-work-gallery .work-card:hover .work-image img {
     transform: scale(1.02);
-
     filter: brightness(0.95);
 }
 
 
-/* ---------------------------------------------------------
-   REMOVE VIEW BUTTON
-   --------------------------------------------------------- */
+/* =========================
+   REMOVE CLICK / LIGHTBOX
+   ========================= */
+
+#recent-work-gallery .work-image {
+    pointer-events: none;
+    cursor: default;
+}
+
+#recent-work-gallery .work-image a {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+/* Hide View button */
 
 #recent-work-gallery .work-view {
     display: none !important;
 }
 
 
-/* ---------------------------------------------------------
-   REMOVE FEATURED / WIDE BEHAVIOUR
-   --------------------------------------------------------- */
-
-#recent-work-gallery .work-card-featured,
-#recent-work-gallery .work-card-wide {
-    grid-column: auto !important;
-    grid-row: auto !important;
-}
-
-
-/* ---------------------------------------------------------
+/* =========================
    TEXT
-   --------------------------------------------------------- */
+   ========================= */
 
 #recent-work-gallery .work-body {
-    padding: 1.25em 1.35em 1.4em;
+    padding: 1.05em 1.2em 1.2em;
 }
 
 #recent-work-gallery .work-number {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
 
     color: #a57e37;
 
-    font-size: 0.68em;
-
+    font-size: 0.67em;
     font-weight: 800;
-
-    letter-spacing: 0.14em;
+    letter-spacing: 0.13em;
 }
 
 #recent-work-gallery .work-body h3 {
-    margin: 0 0 0.45em;
+    margin: 0 0 0.35em;
 
-    font-size: 1.05em;
-
+    font-size: 1em;
     line-height: 1.35em;
 }
 
@@ -567,9 +542,76 @@ body {
 
     color: #747d84;
 
-    font-size: 0.88em;
+    font-size: 0.86em;
+    line-height: 1.6em;
+}
 
-    line-height: 1.7em;
+
+/* =========================================================
+   DESKTOP — KEEP IMAGES COMPACT
+   ========================================================= */
+
+@media screen and (min-width: 981px) {
+
+    #recent-work-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.8em;
+    }
+
+    #recent-work-gallery .work-image img {
+        max-height: 360px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 980px) {
+
+    #recent-work-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.4em;
+    }
+
+    #recent-work-gallery .work-body {
+        padding: 1em 1.1em 1.15em;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 736px) {
+
+    #recent-work-gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    #recent-work-gallery .work-image img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    #recent-work-gallery .work-body {
+        padding: 1em 1.1em 1.2em;
+    }
+
+    #recent-work-gallery .work-body h3 {
+        font-size: 1em;
+    }
+
+    #recent-work-gallery .work-body p {
+        font-size: 0.85em;
+    }
 }
 
 
