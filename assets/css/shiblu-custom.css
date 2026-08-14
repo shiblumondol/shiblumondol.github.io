@@ -108,3 +108,25 @@ body { background:#fff; color:var(--ink); }
 .gallery-close:hover,.gallery-nav:hover{background:rgba(201,164,92,.9);border-color:rgba(201,164,92,.9);color:#fff}.gallery-close{top:-.5rem;right:-.5rem;font-size:1.55em;line-height:1}.gallery-prev{left:-.5rem;top:42%}.gallery-next{right:-.5rem;top:42%}.gallery-lightbox button:focus-visible{outline:3px solid #d8bb7f;outline-offset:3px}body.gallery-open{overflow:hidden}
 @media screen and (max-width:980px){#recent-work-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}#recent-work-gallery .work-card-featured{grid-column:span 2;grid-row:auto}#recent-work-gallery .work-card-wide{grid-column:span 2}#recent-work-gallery .work-card-featured .work-image{height:330px}}
 @media screen and (max-width:736px){#recent-work-gallery{grid-template-columns:1fr;gap:1.1em}#recent-work-gallery .work-card-featured,#recent-work-gallery .work-card-wide{grid-column:span 1}#recent-work-gallery .work-image,#recent-work-gallery .work-card-featured .work-image,#recent-work-gallery .work-card-wide .work-image{height:270px}#recent-work-gallery .work-view{opacity:1;transform:none}.gallery-lightbox{padding:1rem}.gallery-dialog{width:100%}.gallery-figure{width:calc(100vw - 2rem)}.gallery-full{max-height:58vh}.gallery-nav{width:42px;height:42px}.gallery-prev{left:.2rem;top:35%}.gallery-next{right:.2rem;top:35%}.gallery-close{top:-.5rem;right:.1rem}.gallery-hint{display:none}}
+/* Let's Connect background */
+#contact {
+  position: relative;
+  overflow: hidden;
+  padding: 4em 3em;
+  border-radius: 8px;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.60),
+      rgba(0, 0, 0, 0.60)
+    ),
+    url('../../images/opportunity.jpg') center center / cover no-repeat;
+}
+
+#contact,
+#contact h2,
+#contact h3,
+#contact p,
+#contact li,
+#contact a {
+  color: #fff;
+}
