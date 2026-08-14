@@ -17,7 +17,7 @@ body { background:#fff; color:var(--ink); }
   max-width: 70em;
   padding-top: 7em;
   background:
-    linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.80)),
+    linear-gradient(rgba(255,255,255,.70), rgba(255,255,255,.70)),
     url('../../images/sidebar-bg-1.jpg') center center / cover fixed no-repeat;
 }
 #hero .major h2 { font-size:2.65em; line-height:1.18em; letter-spacing:-.035em; margin-bottom:.6em; }
