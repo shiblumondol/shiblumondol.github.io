@@ -14,11 +14,11 @@ body { background:#fff; color:var(--ink); }
 .sidebar-links a { border-bottom:0 !important; color:rgba(255,255,255,.8) !important; font-size:1.25em; transition:.2s ease; }
 .sidebar-links a:hover { color:#fff !important; transform:translateY(-2px); }
 #main {
-  max-width:70em;
-  padding-top:7em;
+  max-width: 70em;
+  padding-top: 7em;
   background:
-    linear-gradient(rgba(255,255,255,.60), rgba(255,255,255,.60)),
-    url('../../images/sidebar-bg.jpg') center/cover fixed;
+    linear-gradient(rgba(255,255,255,.85), rgba(255,255,255,.85)),
+    url('../../images/sidebar-bg-1.jpg') center center / cover fixed no-repeat;
 }
 #hero .major h2 { font-size:2.65em; line-height:1.18em; letter-spacing:-.035em; margin-bottom:.6em; }
 #hero .major:after, .section-heading:after { content:""; display:block; width:52px; height:3px; background:var(--gold); margin:1.2em 0 1.5em; }
