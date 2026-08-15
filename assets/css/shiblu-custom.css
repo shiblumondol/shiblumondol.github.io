@@ -19,7 +19,12 @@ html {
 }
 
 body {
-  background: #fff;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.94),
+      rgba(255, 255, 255, 0.94)
+    ),
+    url("../../images/sidebar-bg-1.jpg") center center / cover fixed no-repeat;
   color: var(--ink);
 }
 
